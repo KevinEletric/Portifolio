@@ -1,0 +1,514 @@
+/* ===================== GERAIS ===================== */
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===================== HEADER ===================== */
+header {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+}
+/* Botão do menu deslizante */
+.sidebar-toggle {
+    display: none; /* Escondido em telas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+/* ===================== LANGUAGE SWITCH ===================== */
+.language-switch {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.language-btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* ===================== NAV MENU ===================== */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-menu a,
+.dropbtn {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.dropbtn:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.dropbtn::after {
+  content: "";
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  margin-left: 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 12px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===================== CENTRALIZAÇÃO DAS SEÇÕES ===================== */
+section.about,
+section.portfolio,
+section#cursos,
+section#contato,
+.servico {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===================== SOBRE MIM ===================== */
+.combined-about {
+  min-height: calc(100vh - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  padding-right: 30px;
+}
+
+.about-text h1 {
+  color: #022859;
+  font-size: 44px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid #3c5473;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-text h4 {
+  color: #7f8c8d;
+  font-size: 18px;
+  margin-top: 0;
+  font-style: italic;
+}
+
+.about-text p {
+  color: #000;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.about-image img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 4px solid #ecf0f1;
+}
+
+.scroll-arrow-container {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-down-arrow {
+  display: inline-block;
+  animation: bounce 2s infinite;
+  color: #022859;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.custom-download-btn {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.custom-download-btn a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s ease;
+  font-style: normal;
+}
+
+.custom-download-btn a:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.custom-download-btn a i {
+  margin-right: 10px;
+}
+
+/* ===================== TÍTULOS DAS SEÇÕES ===================== */
+.portfolio h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #022859;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  display: block;
+  border-bottom: 2px solid #3c5473;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+    font-family: "Poppins", sans-serif;
+    color: #022859;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3c5473;
+    width: fit-content;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* ===================== SERVIÇOS E SUBSERVIÇOS ===================== */
+.servico {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 20px 0;
+}
+
+.servico:hover {
+  transform: translateY(-5px);
+}
+
+.sub-servico-pair {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.sub-servico {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  width: 45%;
+  margin-right: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+}
+
+.sub-servico:last-child {
+  margin-right: 0;
+}
+
+.sub-servico-images {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-left: 12px;
+}
+
+.sub-servico img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub-servico-text {
+  flex: 1;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.sub-servico h4 {
+  color: #34495e;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.servico h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #022859;
+  margin-bottom: 25px;
+}
+
+.sub-servico p {
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sub-servico:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== CURSOS ===================== */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.course-card h3 {
+  color: #34495e;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.course-card p {
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===================== CONTATO ===================== */
+
+section#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  .title-contato {
+    font-family: "Poppins", sans-serif;
+    color: #022859;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3c5473;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .contact-intro1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .contact-intro {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 25px;
+    max-width: 600px;
+  }
+  
+  .contact-card {
+    padding: 25px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .contact-card p {
+    margin: 0;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-card a {
+    color: #022859;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-card a:hover {
+    color: #2980b9;
+  }
+
+  
+/* ===================== FOOTER ===================== */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}

@@ -1,0 +1,125 @@
+/* ========== MODO ESCURO ========== */
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  body.dark-theme .menu-toggle {
+    color: #f0f0f0;
+  }
+  body.dark-theme header,
+  body.dark-theme footer {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+    color: #f0f0f0;
+  }
+  
+
+  body.dark-theme .nav-menu a,
+  body.dark-theme .dropbtn,
+  body.dark-theme .dropbtn::after {
+    color: #ffffff;
+  }
+  
+  body.dark-theme .nav-menu a:hover,
+  body.dark-theme .dropbtn:hover{
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+  
+  
+
+  body.dark-theme .language-btn {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  body.dark-theme .language-btn:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+  }
+
+  body.dark-theme .dropdown-content {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+  }
+  
+  body.dark-theme .dropdown-content a {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  body.dark-theme .dropdown-content a:hover {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .theme-switch {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .theme-switch button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  body.dark-theme .theme-switch button {
+    color: #f0f0f0;
+  }
+  
+  /* Blocos e cartões */
+  body.dark-theme .servico,
+  body.dark-theme .sub-servico,
+  body.dark-theme .course-card,
+  body.dark-theme .contact-card,
+  body.dark-theme .custom-download-btn a {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Textos e títulos */
+  body.dark-theme h4 {
+    color: #c9c7c7;
+  }
+  body.dark-theme h3{
+    color:#f6fafe;
+  }
+  body.dark-theme h1,
+  body.dark-theme h2{
+    color: #5ca1fc;
+  }
+  
+  body.dark-theme p,
+  body.dark-theme .contact-intro,
+  body.dark-theme .contact-intro1,
+  body.dark-theme .sub-servico-text p,
+  body.dark-theme .course-card p,
+  body.dark-theme .about-text p {
+    color: #f0f0f0;
+  }
+
+  body.dark-theme a,
+  body.dark-theme .dropbtn,
+  body.dark-theme .contact-card a {
+    color: #80c0ff;
+  }
+  
+  body.dark-theme a:hover,
+  body.dark-theme .contact-card a:hover {
+    color: #bde9ff;
+  }
+  
+  body.dark-theme .custom-download-btn a {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #ccc;
+  }
+  

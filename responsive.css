@@ -1,0 +1,249 @@
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Tablets (telas até 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Ajustar seções para ocupar largura total */
+    section.about,
+    section.portfolio,
+    section#cursos,
+    section#contato,
+    .servico {
+      padding: 30px 15px;
+      max-width: 100%;
+    }
+  
+    /* Ajustar layout da seção "Sobre" */
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .about-text {
+      padding-right: 0;
+      text-align: center;
+      flex: 1 1 100%;
+    }
+  
+    .about-image img {
+      max-width: 200px;
+    }
+  
+    /* Ajustar grade de cursos */
+    .course-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+  
+    /* Ajustar sub-serviços */
+    .sub-servico-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sub-servico {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .sub-servico img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    /* Ajustar botões de idioma e tema */
+    .language-switch,
+    .theme-switch {
+      left: auto;
+      right: 15px;
+      top: 10px;
+      transform: none;
+    }
+  }
+  
+  /* Smartphones (telas até 768px) */
+  @media screen and (max-width: 768px) {
+    /* Ajustar header */
+    header {
+      padding: 15px 0;
+    }
+  
+    /* Menu deslizante */
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      left: -100%; /* Escondido à esquerda */
+      width: 250px;
+      height: 100%;
+      background-color: #ffffff;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-menu.active {
+      left: 0; /* Mostra o menu */
+    }
+  
+    body.dark-theme .nav-menu {
+      background-color: #1a1a1a;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-menu a,
+    .dropbtn {
+      padding: 15px;
+      font-size: 18px;
+      text-align: left;
+      display: block;
+    }
+  
+    .dropdown-content {
+      position: static;
+      background-color: #f9f9f9;
+      width: 100%;
+      box-shadow: none;
+      border: none;
+    }
+  
+    body.dark-theme .dropdown-content {
+      background-color: #1e1e1e;
+    }
+  
+    .dropdown-content a {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  
+    /* Mostrar botão do menu deslizante */
+    .sidebar-toggle {
+      display: block;
+    }
+  
+    /* Ajustar seção "Sobre" */
+    .about-text h1 {
+      font-size: 32px;
+    }
+  
+    .about-text h4 {
+      font-size: 16px;
+    }
+  
+    .about-text p {
+      font-size: 14px;
+    }
+  
+    .about-image img {
+      max-width: 150px;
+    }
+  
+    /* Ajustar serviços */
+    .servico h3 {
+      font-size: 24px;
+    }
+  
+    .sub-servico-text h4 {
+      font-size: 16px;
+    }
+  
+    .sub-servico-text p {
+      font-size: 13px;
+    }
+  
+    .sub-servico img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    /* Ajustar cursos */
+    .course-card h3 {
+      font-size: 16px;
+    }
+  
+    .course-card p {
+      font-size: 13px;
+    }
+  
+    .course-header img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    /* Ajustar contato */
+    .contact-card {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .contact-intro1 {
+      font-size: 18px;
+    }
+  
+    .contact-intro {
+      font-size: 14px;
+    }
+  
+    .contact-card p {
+      font-size: 15px;
+    }
+  
+    /* Ajustar botão de download */
+    .custom-download-btn a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    /* Esconder seta de rolagem em mobile */
+    .scroll-down-arrow {
+      display: none;
+    }
+  }
+  
+  /* Smartphones menores (telas até 480px) */
+  @media screen and (max-width: 480px) {
+    /* Ajustar fontes e espaçamentos */
+    .about-text h1 {
+      font-size: 28px;
+    }
+  
+    .servico h3 {
+      font-size: 20px;
+    }
+  
+    .course-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .language-btn,
+    .theme-switch button {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    /* Ajustar menu deslizante para telas muito pequenas */
+    .nav-menu {
+      width: 200px;
+    }
+  
+    .nav-menu a,
+    .dropbtn {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .dropdown-content a {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }
